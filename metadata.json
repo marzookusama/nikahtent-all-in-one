@@ -1,0 +1,6 @@
+{
+  "name": "Nikahtent",
+  "description": "Sri Lankan Muslim Matrimonial Service & Wedding Vendor Marketplace with compatibility matching and comprehensive vendor services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
