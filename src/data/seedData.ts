@@ -253,7 +253,7 @@ export const SEED_VENDORS: VendorListing[] = [
     ],
     isVerified: true,
     subscriptionStatus: 'trial_active',
-    trialDaysLeft: 52,
+    trialDaysLeft: 178, // 6 Months Free Launch Trial
     description: 'Premier Colombo bridal studio specializing in modest Muslim bridal aesthetics, bespoke hijab drapery, and certified chemical-free organic henna.',
     contactPhone: '+94 77 345 8899',
     whatsapp: '+94773458899',
@@ -263,14 +263,30 @@ export const SEED_VENDORS: VendorListing[] = [
         author: 'Sumayya N.',
         rating: 5,
         date: '2 weeks ago',
-        comment: 'Farzana made me look and feel like royalty on my Nikah day! Her hijab draping stayed flawless for 8 hours.'
+        title: 'Bespoke Modest Bridal Hijab & Flawless Mehndi',
+        comment: 'Farzana made me look and feel like royalty on my Nikah day! Her hijab draping stayed flawless for 8 hours without slipping.',
+        isVerifiedBooking: true,
+        bookingId: 'bkg_seed_01',
+        serviceBooked: 'Grand Walima Signature',
+        avatarUrl: '/src/assets/images/avatar_muslim_female_1790918671916.jpg',
+        isAnonymous: false,
+        vendorReply: {
+          comment: 'Jazakallah Khairan dear Sumayya! You looked breathtaking and so elegant. May Allah bless your marriage with endless barakah.',
+          date: '1 week ago'
+        }
       },
       {
         id: 'rev_2',
-        author: 'Ayesha K.',
+        author: 'Verified Client',
         rating: 5,
         date: '1 month ago',
-        comment: 'The organic henna color was dark mahogany and so neat. Booked via Nikahtent without any hassle.'
+        title: 'Authentic Organic Henna Staining',
+        comment: 'The organic henna color was dark mahogany and so neat. Booked via Nikahtent without any hassle and loved the punctuality.',
+        isVerifiedBooking: true,
+        bookingId: 'bkg_seed_02',
+        serviceBooked: 'Classic Nikah Bridal Glamour',
+        avatarUrl: '/src/assets/images/avatar_muslim_female_1790918671916.jpg',
+        isAnonymous: true
       }
     ],
     ownerId: 'usr_vnd_01'
@@ -305,8 +321,8 @@ export const SEED_VENDORS: VendorListing[] = [
       }
     ],
     isVerified: true,
-    subscriptionStatus: 'subscribed',
-    trialDaysLeft: 0,
+    subscriptionStatus: 'trial_active',
+    trialDaysLeft: 172, // 6 Months Free Launch Trial
     description: 'Serving authentic firewood Dum Buriyani for Sri Lankan Muslim weddings for over 25 years. Certified 100% Halal kitchen with professional silver service staff.',
     contactPhone: '+94 11 268 7788',
     whatsapp: '+94712687788',
@@ -316,7 +332,17 @@ export const SEED_VENDORS: VendorListing[] = [
         author: 'Mohamed Rizwan',
         rating: 5,
         date: '3 weeks ago',
-        comment: 'All 400 guests praised the Buriyani taste and the warm Watalappam. Punctual delivery to the hall!'
+        title: 'Outstanding Firewood Buriyani & Hot Watalappam',
+        comment: 'All 400 guests praised the authentic firewood Buriyani aroma and the warm cashewed Watalappam. Punctual delivery to the hall and friendly servers!',
+        isVerifiedBooking: true,
+        bookingId: 'bkg_seed_03',
+        serviceBooked: 'Traditional Walima Feast',
+        avatarUrl: '/src/assets/images/avatar_muslim_male_1790918656733.jpg',
+        isAnonymous: false,
+        vendorReply: {
+          comment: 'Alhamdulillah! Thank you Brother Rizwan, our culinary team was blessed to cater your son’s Walima. Barakal-lahu lakuma.',
+          date: '2 weeks ago'
+        }
       }
     ],
     ownerId: 'usr_vnd_02'
@@ -352,7 +378,7 @@ export const SEED_VENDORS: VendorListing[] = [
     ],
     isVerified: true,
     subscriptionStatus: 'trial_active',
-    trialDaysLeft: 46,
+    trialDaysLeft: 172,
     description: 'Transforming indoor halls and private gardens across Kandy, Matale, and Kurunegala into royal wedding pavilions. Heavy duty waterproof marquees and designer stage decor.',
     contactPhone: '+94 81 445 6789',
     whatsapp: '+94814456789',
@@ -398,7 +424,7 @@ export const SEED_VENDORS: VendorListing[] = [
     ],
     isVerified: true,
     subscriptionStatus: 'trial_active',
-    trialDaysLeft: 58,
+    trialDaysLeft: 180,
     description: 'Specialists in Muslim wedding photography with strict respect for pardah/modesty guidelines. We offer all-female photographer and editor teams on request.',
     contactPhone: '+94 77 889 0011',
     whatsapp: '+94778890011',
@@ -438,7 +464,7 @@ export const SEED_VENDORS: VendorListing[] = [
     ],
     isVerified: true,
     subscriptionStatus: 'trial_active',
-    trialDaysLeft: 38,
+    trialDaysLeft: 168,
     description: 'Renowned executive chef with 18 years in Gulf 5-star hotels, now offering on-site master culinary curation for high-profile Sri Lankan Muslim weddings.',
     contactPhone: '+94 91 334 2211',
     whatsapp: '+94913342211',
@@ -483,46 +509,383 @@ export const SEED_VENDORS: VendorListing[] = [
     ],
     isVerified: true,
     subscriptionStatus: 'trial_active',
-    trialDaysLeft: 42,
+    trialDaysLeft: 175,
     description: 'Dependable wedding logistics with over 2,000 chairs, luxury round tables, waterproof marquee tents, and generator backups.',
     contactPhone: '+94 11 243 1199',
     whatsapp: '+94112431199',
     reviews: [],
     ownerId: 'usr_vnd_06'
+  },
+  {
+    id: 'vnd_07',
+    name: 'Royal Serendib Car Hire',
+    businessName: 'Royal Serendib Luxury Wedding Car Hire & Limos',
+    category: 'car_rental',
+    district: 'Colombo',
+    address: 'Duplication Road, Kollupitiya, Colombo 03',
+    rating: 5.0,
+    reviewCount: 48,
+    startingPriceLKR: 45000,
+    priceUnit: 'per event / day',
+    portfolioImages: [
+      '/src/assets/images/vendor_wedding_car_1790917678221.jpg'
+    ],
+    packages: [
+      {
+        id: 'pkg_cr1',
+        title: 'Mercedes-Benz E-Class AMG Bridal Chauffeur',
+        priceLKR: 45000,
+        features: [
+          'Pearl White Mercedes-Benz E-Class AMG',
+          'Uniformed Professional Chauffeur (English / Tamil / Sinhala)',
+          'Fresh White Rose & Satin Ribbon Bonnet Decoration',
+          '80 km Fuel Package in Colombo & Western Province',
+          'Air-conditioned VIP Ride with Complimentary Chilled Refreshments'
+        ]
+      },
+      {
+        id: 'pkg_cr2',
+        title: 'Royal Rolls-Royce & BMW 7-Series VVIP Walima Convoy',
+        priceLKR: 115000,
+        features: [
+          'White Rolls-Royce Silver Spur or Long-Wheelbase BMW 7-Series',
+          'Full Fresh Floral Arch Bonnet & Door Handle Garlands',
+          '120 km Package with Dedicated Chauffeur for Groom & Bride Entry',
+          'Red Carpet Arrival Mat for Grand Reception Entrance',
+          'Zero Punctuality Delay Guarantee with GPS Live Tracking'
+        ]
+      },
+      {
+        id: 'pkg_cr3',
+        title: 'Family & Guest AC Van / Luxury Coaster Bus',
+        priceLKR: 38000,
+        features: [
+          '14-Seater Toyota KDH High-Roof Luxury Van with Chauffeur',
+          'Dual AC, Reclining Plush Seats, Audio System',
+          'Outstation Travel to Kandy, Galle, or Beruwala for Extended Family'
+        ]
+      }
+    ],
+    isVerified: true,
+    subscriptionStatus: 'trial_active',
+    trialDaysLeft: 179,
+    description: 'Premier luxury wedding car rental across Colombo, Gampaha, Galle, and Kalutara. Featuring immaculate white Mercedes-Benz, BMW, vintage sedans, and family guest vans with courteous, punctual chauffeurs.',
+    contactPhone: '+94 77 455 2233',
+    whatsapp: '+94774552233',
+    reviews: [
+      {
+        id: 'rev_cr1',
+        author: 'Ashfaq & Shazna',
+        rating: 5,
+        date: '1 week ago',
+        title: 'Spotless Mercedes E-Class & Punctual Chauffeur',
+        comment: 'The Mercedes E-Class arrived 30 minutes early, spotless and gorgeously decorated with fresh white lilies. The driver was very respectful and smooth on the roads!',
+        isVerifiedBooking: true,
+        bookingId: 'bkg_seed_04',
+        serviceBooked: 'Mercedes-Benz E-Class AMG Bridal Chauffeur',
+        avatarUrl: '/src/assets/images/avatar_muslim_male_1790918656733.jpg',
+        isAnonymous: false,
+        vendorReply: {
+          comment: 'Thank you Ashfaq & Shazna! Wishing you a blessed journey together in marriage.',
+          date: '5 days ago'
+        }
+      },
+      {
+        id: 'rev_cr2',
+        author: 'Verified Client',
+        rating: 5,
+        date: '3 weeks ago',
+        title: 'Reliable Outstation Guest Transport',
+        comment: 'Booked both the bridal sedan and a KDH van for our relatives coming from Kandy. Superb coordination through Nikahtent!',
+        isVerifiedBooking: true,
+        bookingId: 'bkg_seed_05',
+        serviceBooked: 'Family & Guest AC Van / Luxury Coaster Bus',
+        avatarUrl: '/src/assets/images/avatar_muslim_male_1790918656733.jpg',
+        isAnonymous: true
+      }
+    ],
+    ownerId: 'usr_vnd_07'
+  },
+  {
+    id: 'vnd_08',
+    name: 'Central Hills Vintage & Prado Hire',
+    businessName: 'Central Hills Vintage & Luxury Bridal Car Hire',
+    category: 'car_rental',
+    district: 'Kandy',
+    address: 'Peradeniya Road, Kandy',
+    rating: 4.9,
+    reviewCount: 31,
+    startingPriceLKR: 42000,
+    priceUnit: 'per event hire',
+    portfolioImages: [
+      '/src/assets/images/vendor_wedding_car_1790917678221.jpg'
+    ],
+    packages: [
+      {
+        id: 'pkg_cr4',
+        title: 'Classic Vintage Austin / Morris Bridal Hire',
+        priceLKR: 42000,
+        features: [
+          '1950s Restored Classic White Vintage Sedan',
+          'Period-Accurate Chauffeur Uniform',
+          'Traditional Floral Garland Bonnet Styling',
+          'Perfect for Timeless Cinematic Wedding Photography'
+        ]
+      },
+      {
+        id: 'pkg_cr5',
+        title: 'Toyota Land Cruiser Prado VIP Escort',
+        priceLKR: 58000,
+        features: [
+          'Pearl White Prado TXL V6 Luxury SUV',
+          'Hill Country Mountain-Terrain Certified Driver',
+          '100 km Fuel Allowance across Kandy, Akurana, Matale & Kurunegala',
+          'VIP Bride & Groom Escort'
+        ]
+      }
+    ],
+    isVerified: true,
+    subscriptionStatus: 'trial_active',
+    trialDaysLeft: 175,
+    description: 'Specialized wedding car and convoy hire for the Central Province. Offering restored vintage classics, executive SUVs, and luxury vans for weddings in Kandy, Akurana, Gampola, and Kurunegala.',
+    contactPhone: '+94 81 220 8877',
+    whatsapp: '+94812208877',
+    reviews: [
+      {
+        id: 'rev_cr3',
+        author: 'Dr. Tariq & Dr. Fatima',
+        rating: 5,
+        date: '2 weeks ago',
+        title: 'Breathtaking 1950s Vintage Car in Kandy Hills',
+        comment: 'The vintage car in Kandy created the most unforgettable photos. Our families loved every second of it!',
+        isVerifiedBooking: true,
+        bookingId: 'bkg_seed_08',
+        serviceBooked: 'Classic Vintage Austin / Morris Bridal Hire',
+        avatarUrl: '/src/assets/images/avatar_muslim_male_1790918656733.jpg',
+        isAnonymous: false
+      },
+      {
+        id: 'rev_dispute_01',
+        author: 'Anonymous User',
+        rating: 1,
+        date: '2 days ago',
+        title: 'Vehicle AC was weak during midday trip',
+        comment: 'We booked the luxury Prado for Akurana to Kandy trip and the AC felt warm during the afternoon heat.',
+        isVerifiedBooking: true,
+        bookingId: 'bkg_seed_09',
+        serviceBooked: 'Toyota Land Cruiser Prado VIP Escort',
+        avatarUrl: '/src/assets/images/avatar_muslim_male_1790918656733.jpg',
+        isAnonymous: true,
+        disputeStatus: 'pending_admin_review',
+        disputeReason: 'False technical claim: Pre-trip OBD-II diagnostics and driver video show dual-zone climate control cooled to 19°C throughout the hire. Client has mixed up our booking with an unverified external third-party rental.',
+        disputeRequestedAt: 'Yesterday'
+      }
+    ],
+    ownerId: 'usr_vnd_08'
+  },
+  {
+    id: 'vnd_09',
+    name: 'Al-Mubarak Grand Banquet Center',
+    businessName: 'Al-Mubarak Grand Banquet & Convention Center',
+    category: 'wedding_hall',
+    district: 'Colombo',
+    address: 'Marine Drive & Station Road, Wellawatte, Colombo 06',
+    rating: 4.9,
+    reviewCount: 64,
+    startingPriceLKR: 220000,
+    priceUnit: 'per 5-hour hall session',
+    portfolioImages: [
+      '/src/assets/images/vendor_wedding_hall_1790918022795.jpg'
+    ],
+    hallCapacity: 650,
+    venueType: 'Grand Banquet Hall',
+    segregatedDining: true,
+    prayerRoomAvailable: true,
+    packages: [
+      {
+        id: 'pkg_wh1',
+        title: 'Silver Nikah Ceremony Hall Hire (4 Hours)',
+        priceLKR: 220000,
+        features: [
+          'Air-Conditioned Grand Ballroom (up to 400 guests)',
+          'Complete Islamic Partitioning for Ladies & Gents Dining',
+          'Bridal VIP Green Room & Groom Waiting Suite',
+          'Dedicated Wudhu & Male/Female Prayer Rooms with Sound System',
+          'Heavy Duty Sound System with Wireless Handheld Mics for Qiraat',
+          '100-Vehicle Basement Car Park with Valet Staff'
+        ]
+      },
+      {
+        id: 'pkg_wh2',
+        title: 'Royal Walima Grand Ballroom Spectacular (6 Hours)',
+        priceLKR: 380000,
+        features: [
+          'Full Grand Hall Access for up to 650 seated guests',
+          'Crystal Chandelier Lighting with Programmable Ambience LEDs',
+          'Heavy Truss Stage Lighting & Follow Spotlight for Bride Entrance',
+          'Zero Noise Disruption Centralized Air Conditioning',
+          'Red Carpet Reception Corridor & Welcome Photo Booth Foyer',
+          'Full 400kVA Standby Auto-Generator (Zero Power Failure)',
+          'Cleaning Staff & Waste Logistics Included'
+        ]
+      },
+      {
+        id: 'pkg_wh3',
+        title: 'Intimate Nikah Morning Session (3 Hours)',
+        priceLKR: 160000,
+        features: [
+          'Compact Hall Section for 150 - 250 close family guests',
+          'Traditional Stage Carpet, Signing Table & Floral Pedestals',
+          'Sound Setup for Khutbah Nikah & Dua',
+          'Morning Slot (9:30 AM to 1:00 PM)'
+        ]
+      }
+    ],
+    isVerified: true,
+    subscriptionStatus: 'trial_active',
+    trialDaysLeft: 180,
+    description: 'Premier air-conditioned Islamic wedding convention venue located along Colombo Marine Drive. Tailored specifically for Muslim Nikah and Walima ceremonies with verified privacy screens, pristine prayer facilities, and high-capacity secure parking.',
+    contactPhone: '+94 11 258 7766',
+    whatsapp: '+94112587766',
+    reviews: [
+      {
+        id: 'rev_wh1',
+        author: 'Hafiz Rizwan & Dr. Nabeela',
+        rating: 5,
+        date: '5 days ago',
+        title: 'Perfect Islamic Partition & Peaceful Prayer Facility',
+        comment: 'The separate dining division and prayer hall made our Walima so peaceful and organized. The management was extremely helpful and respectful throughout the evening!',
+        isVerifiedBooking: true,
+        bookingId: 'bkg_seed_06',
+        serviceBooked: 'Royal Walima Grand Ballroom Spectacular (6 Hours)',
+        avatarUrl: '/src/assets/images/avatar_muslim_male_1790918656733.jpg',
+        isAnonymous: false,
+        vendorReply: {
+          comment: 'Jazakumullahu Khayran Hafiz Rizwan & Dr. Nabeela! It was our pride to host your blessed Walima.',
+          date: '3 days ago'
+        }
+      },
+      {
+        id: 'rev_wh2',
+        author: 'Verified Client',
+        rating: 5,
+        date: '3 weeks ago',
+        title: 'Spacious Ballroom & Unmatched Air Conditioning',
+        comment: 'Spacious, immaculate AC, and the stage lighting brought our decor alive. Valet parking on Marine Drive handled our 500 guests effortlessly.',
+        isVerifiedBooking: true,
+        bookingId: 'bkg_seed_07',
+        serviceBooked: 'Silver Nikah Ceremony Hall Hire (4 Hours)',
+        avatarUrl: '/src/assets/images/avatar_muslim_female_1790918671916.jpg',
+        isAnonymous: true
+      }
+    ],
+    ownerId: 'usr_vnd_09'
+  },
+  {
+    id: 'vnd_10',
+    name: 'Hillside Royal Palace Pavilion',
+    businessName: 'Hillside Royal Palace & Mountain View Garden Ballroom',
+    category: 'wedding_hall',
+    district: 'Kandy',
+    address: 'Kandy - Rajapihilla Mawatha / Earls Heights',
+    rating: 4.8,
+    reviewCount: 38,
+    startingPriceLKR: 195000,
+    priceUnit: 'per event slot',
+    portfolioImages: [
+      '/src/assets/images/vendor_wedding_hall_1790918022795.jpg'
+    ],
+    hallCapacity: 500,
+    venueType: 'Hotel Ballroom & Garden Pavilion',
+    segregatedDining: true,
+    prayerRoomAvailable: true,
+    packages: [
+      {
+        id: 'pkg_wh4',
+        title: 'Central Hill Country Nikah & Walima Package',
+        priceLKR: 195000,
+        features: [
+          'Pillarless Panoramic Mountain View AC Ballroom (450 Pax)',
+          'Open-Air Landscaped Garden for Golden-Hour Bridal Photography',
+          'Dedicated Halal Food Staging Area with Hot Water Boiler Facilities',
+          'Bridal Suite with Private Washroom & Dressing Mirrors',
+          'Prayer Room Facilities with Qibla Direction',
+          'Ample On-Site Bus and Car Parking for Outstation Guests'
+        ]
+      },
+      {
+        id: 'pkg_wh5',
+        title: 'Twilight Starlight Pavilion (Garden + Banquet)',
+        priceLKR: 290000,
+        features: [
+          'Evening Garden Marquee & Glass Ballroom (500 Pax)',
+          'Fairy Light Canopy over Courtyard for Welcome Refreshments',
+          'Stage Truss & Ambient Wash Lights',
+          'Dedicated Event Supervisor on Duty'
+        ]
+      }
+    ],
+    isVerified: true,
+    subscriptionStatus: 'trial_active',
+    trialDaysLeft: 177,
+    description: 'Breathtaking scenic wedding ballroom and open lawn in Kandy. Perfectly designed for Central Province Muslim weddings seeking scenic backdrops, complete dining segregation, and stress-free guest hospitality.',
+    contactPhone: '+94 81 449 2200',
+    whatsapp: '+94814492200',
+    reviews: [
+      {
+        id: 'rev_wh3',
+        author: 'Firas & Zaheera',
+        rating: 5,
+        date: '2 weeks ago',
+        comment: 'The scenic mountain sunset during our Walima was magical. The hall acoustics and separate ladies area were flawless.'
+      }
+    ],
+    ownerId: 'usr_vnd_10'
   }
 ];
+
+export const INITIAL_BILLING_SETTINGS = {
+  isPlatformChargingActive: false, // 100% Free Launch Phase: Admin can toggle charge on/off
+  globalTrialMonths: 6, // 6 Months Free Trial for all vendors & members
+  promotionalBannerText: '🎉 Grand Launch Special: 6 Months 100% Free Access for All Members & Wedding Vendors!',
+  launchPromoActive: true
+};
 
 export const INITIAL_SUBSCRIPTION_PLANS: SubscriptionPlanConfig[] = [
   {
     id: 'sub_free',
     code: 'free',
-    name: 'Basic Halal Tier',
+    name: '6-Month Free Launch Tier',
     targetType: 'matrimony',
     priceMonthlyLKR: 0,
     priceYearlyLKR: 0,
-    requestLimit: 3,
+    requestLimit: 'unlimited',
+    freeTrialMonths: 6,
     features: [
-      '3 Connection Requests per month',
-      'Personality Compatibility Scores',
-      'End-to-End Encrypted Private Chat',
-      'Photo Privacy Protection (Blurred/Lock)',
-      'Basic Search & District Filters'
+      '6 Months 100% Free Access (180 Days)',
+      'Unlimited Connection Requests during Launch',
+      'Personality Compatibility Scores & Shared Interests',
+      'End-to-End Encrypted Private Messaging',
+      'Photo Privacy Protection (Blurred/Lock Control)',
+      'Full Island-wide District & Community Filters'
     ],
-    isActive: true
+    isActive: true,
+    badgeText: 'Launch Special'
   },
   {
     id: 'sub_silver',
     code: 'silver',
-    name: 'Silver Mubarak',
+    name: 'Silver Mubarak Tier',
     targetType: 'matrimony',
     priceMonthlyLKR: 3500,
     priceYearlyLKR: 28000,
     requestLimit: 15,
+    freeTrialMonths: 6,
     features: [
-      '15 Connection Requests per month',
+      'Included in 6-Month Free Launch Trial',
+      '15 Priority Requests / Month (Standard Plan)',
       'Direct Chaperone / Wali Contact Access',
       'Detailed Personality Dimension Breakdown',
-      'Priority Matching Algorithm Placement',
       'Verified ID Priority Badge'
     ],
     isActive: true,
@@ -531,17 +894,18 @@ export const INITIAL_SUBSCRIPTION_PLANS: SubscriptionPlanConfig[] = [
   {
     id: 'sub_gold',
     code: 'gold',
-    name: 'Gold Barakah',
+    name: 'Gold Barakah Tier',
     targetType: 'matrimony',
     priceMonthlyLKR: 6500,
     priceYearlyLKR: 52000,
     requestLimit: 35,
+    freeTrialMonths: 6,
     features: [
+      'Included in 6-Month Free Launch Trial',
       '35 Connection Requests per month',
       'Read Receipts on Encrypted Messages',
-      'Dedicated Matchmaking Advisor Session',
-      'Profile Spotlight to 5,000+ Active Members',
-      'Unlimited Profile Photo Viewing Unlocks'
+      'Dedicated Matchmaking Advisor Guidance',
+      'Profile Spotlight to Active Members'
     ],
     isActive: true,
     badgeText: 'Best Value'
@@ -549,17 +913,18 @@ export const INITIAL_SUBSCRIPTION_PLANS: SubscriptionPlanConfig[] = [
   {
     id: 'sub_platinum',
     code: 'platinum',
-    name: 'Platinum Royal',
+    name: 'Platinum Royal Tier',
     targetType: 'matrimony',
     priceMonthlyLKR: 12000,
     priceYearlyLKR: 96000,
     requestLimit: 'unlimited',
+    freeTrialMonths: 6,
     features: [
-      'Unlimited Connection Requests per month',
+      'Included in 6-Month Free Launch Trial',
+      'Unlimited Requests Always',
       'Top-Tier Profile Boost in Match Feeds',
       'Personal Nikah Relationship Chaperone',
-      'Exclusive 15% Discount on Nikahtent Wedding Vendors',
-      '24/7 Priority Support & Relationship Counselor'
+      'Exclusive 15% Discount on Nikahtent Wedding Vendors'
     ],
     isActive: true,
     badgeText: 'VIP'
@@ -567,19 +932,22 @@ export const INITIAL_SUBSCRIPTION_PLANS: SubscriptionPlanConfig[] = [
   {
     id: 'sub_vnd_starter',
     code: 'vendor_standard',
-    name: 'Vendor Standard Listing',
+    name: 'Vendor Standard Showcase',
     targetType: 'vendor',
     priceMonthlyLKR: 5000,
     priceYearlyLKR: 45000,
     requestLimit: 'unlimited',
+    freeTrialMonths: 6,
     features: [
-      '2 Months Free Initial Trial Period',
-      'Full Portfolio Showcase & Packages',
+      '6 Months Totally Free Trial (180 Days Zero Fee)',
+      '0% Commission on All Wedding Bookings',
+      'Full Portfolio Showcase & Dynamic Packages',
       'Direct Client Booking Request Inbox',
       'Client Verified Ratings & Reviews',
-      'WhatsApp & Phone Lead Generation'
+      'WhatsApp & Direct Phone Contact Generation'
     ],
-    isActive: true
+    isActive: true,
+    badgeText: '6 Mo. Free'
   },
   {
     id: 'sub_vnd_featured',
@@ -589,7 +957,9 @@ export const INITIAL_SUBSCRIPTION_PLANS: SubscriptionPlanConfig[] = [
     priceMonthlyLKR: 11000,
     priceYearlyLKR: 99000,
     requestLimit: 'unlimited',
+    freeTrialMonths: 6,
     features: [
+      '6 Months Free Trial Period Included',
       'Top of Search Category Pinning',
       'Gold Verified Service Badge',
       'Direct Lead Push Alerts on WhatsApp',
@@ -597,7 +967,7 @@ export const INITIAL_SUBSCRIPTION_PLANS: SubscriptionPlanConfig[] = [
       'Analytics Dashboard for Profile Views'
     ],
     isActive: true,
-    badgeText: 'Vendor Choice'
+    badgeText: 'Featured Pro'
   }
 ];
 

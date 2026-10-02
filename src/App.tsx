@@ -74,6 +74,8 @@ export default function App() {
   const [notifications, setNotifications] = useState<SystemNotification[]>(INITIAL_NOTIFICATIONS);
   const [vendors, setVendors] = useState<VendorListing[]>(SEED_VENDORS);
 
+  const [selectedVendorId, setSelectedVendorId] = useState<string>('vnd_07');
+
   const [vendorBookings, setVendorBookings] = useState<VendorBooking[]>([
     {
       id: 'bkg_01',
@@ -89,6 +91,36 @@ export default function App() {
       status: 'inquiry',
       createdAt: 'Yesterday',
       notes: 'Bridal room setup at Cinnamon Lakeside, Colombo.'
+    },
+    {
+      id: 'bkg_02',
+      vendorId: 'vnd_07',
+      vendorName: 'Royal Serendib Luxury Wedding Car Hire & Limos',
+      vendorCategory: 'car_rental',
+      userId: 'usr_02',
+      userName: 'Fatima Zahra',
+      eventDate: '2026-12-05',
+      guestCount: 4,
+      packageTitle: 'Mercedes-Benz E-Class AMG Bridal Chauffeur',
+      priceLKR: 45000,
+      status: 'inquiry',
+      createdAt: '3 hours ago',
+      notes: 'Pickup from Dehiwala residence at 4:30 PM to Galle Face Hotel Grand Ballroom.'
+    },
+    {
+      id: 'bkg_03',
+      vendorId: 'vnd_09',
+      vendorName: 'Al-Mubarak Grand Banquet & Convention Center',
+      vendorCategory: 'wedding_hall',
+      userId: CURRENT_USER.id,
+      userName: CURRENT_USER.name,
+      eventDate: '2026-12-18',
+      guestCount: 500,
+      packageTitle: 'Royal Walima Grand Ballroom Spectacular (6 Hours)',
+      priceLKR: 380000,
+      status: 'inquiry',
+      createdAt: 'Just now',
+      notes: 'Evening Walima reception from 5:30 PM to 11:00 PM. Full dining partition for ladies and gents required.'
     }
   ]);
 
@@ -664,7 +696,9 @@ export default function App() {
 
         {currentView === 'vendor_dashboard' && (
           <VendorDashboard
-            currentVendor={vendors[0]}
+            currentVendor={vendors.find((v) => v.id === selectedVendorId) || vendors[0]}
+            allVendors={vendors}
+            onSelectVendor={(id) => setSelectedVendorId(id)}
             bookings={vendorBookings}
             onUpdateBookingStatus={(bookingId, status) => {
               setVendorBookings((prev) =>

@@ -37,6 +37,20 @@ export interface UserProfile {
   dietaryPreference: 'Halal Only' | 'Strict Halal';
   isReported?: boolean;
   isBlocked?: boolean;
+  country?: string;
+  coordinates?: { lat: number; lng: number };
+}
+
+export interface CountryConfig {
+  code: string;
+  name: string;
+  flag: string;
+  currencyCode: string;
+  currencySymbol: string;
+  rateToLKR: number;
+  districts: string[];
+  defaultCoords: { lat: number; lng: number };
+  popularCities: string[];
 }
 
 export interface ConnectionRequest {
@@ -76,12 +90,15 @@ export interface ImageModerationItem {
 }
 
 export type VendorCategory = 
+  | 'wedding_hall'
   | 'beautician' 
   | 'catering' 
   | 'chef' 
   | 'stage_decor' 
   | 'tent_chairs' 
-  | 'photo_shooter';
+  | 'photo_shooter'
+  | 'car_rental'
+  | 'wedding_hall';
 
 export interface VendorPackage {
   id: string;
@@ -92,10 +109,26 @@ export interface VendorPackage {
 
 export interface VendorReview {
   id: string;
+  vendorId?: string;
+  userId?: string;
   author: string;
-  rating: number;
+  isAnonymous?: boolean;
+  avatarUrl?: string;
+  rating: number; // 1-5
   date: string;
+  title?: string;
   comment: string;
+  bookingId?: string;
+  isVerifiedBooking: boolean;
+  serviceBooked?: string;
+  eventDate?: string;
+  vendorReply?: {
+    comment: string;
+    date: string;
+  };
+  disputeStatus?: 'none' | 'pending_admin_review' | 'dismissed';
+  disputeReason?: string;
+  disputeRequestedAt?: string;
 }
 
 export interface VendorListing {
@@ -119,6 +152,16 @@ export interface VendorListing {
   whatsapp: string;
   reviews: VendorReview[];
   ownerId: string;
+  hallCapacity?: number;
+  venueType?: string;
+  segregatedDining?: boolean;
+  prayerRoomAvailable?: boolean;
+  vehicleFleet?: string[];
+  chauffeurIncluded?: boolean;
+  country: string; // e.g. 'LK', 'AE', 'GB', 'IN'
+  city?: string;
+  coordinates?: { lat: number; lng: number };
+  distanceKm?: number;
 }
 
 export interface VendorBooking {
@@ -148,6 +191,14 @@ export interface SubscriptionPlanConfig {
   features: string[];
   isActive: boolean;
   badgeText?: string;
+  freeTrialMonths?: number;
+}
+
+export interface PlatformBillingSettings {
+  isPlatformChargingActive: boolean;
+  globalTrialMonths: number;
+  promotionalBannerText: string;
+  launchPromoActive: boolean;
 }
 
 export interface UserActivityLog {
